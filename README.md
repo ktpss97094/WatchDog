@@ -1,2 +1,2 @@
 # WatchDog
-WatchDog sends a notification  if a device is disconnected.
+WatchDog sends a notification through LINE if a device is disconnected.
