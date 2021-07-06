@@ -24,16 +24,12 @@ while True:
             ODF = 'Monitor-O{}'.format(index)
             data = DAN.pull_with_ts(ODF)
             if data != None:
-                try:
-                    device_id   = data[0][0][0] 
-                    device_name = data[0][0][1]
-                    timestamp = data[1]
-                    #print ('{}, {}, {}'.format(device_id, device_name, timestamp))
-                    WatchDog.update(device_id, device_name, timestamp)
-                except Exception as e:
-                    print('Wrong DF format: {}'.format(e))
+                device_id   = data[0][0][0] 
+                device_name = data[0][0][1]
+                timestamp = data[1]
+                #print ('{}, {}, {}'.format(device_id, device_name, timestamp))
+                WatchDog.update(device_id, device_name, timestamp)
             time.sleep(5)
-            
     except Exception as e:
         print(e)
         if str(e).find('mac_addr not found:') != -1:
