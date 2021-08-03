@@ -11,4 +11,4 @@ def line_notify(msg):
 
 if __name__ == '__main__':
     msg = '\n 中文字測試'
-    notify(msg)
+    line_notify(msg)
